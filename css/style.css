@@ -1,3 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins',sans-serif;background:#000;color:#fff}
+a{text-decoration:none;color:#fff}
+
+/* container */
+.app-container{max-width:600px;margin:auto;padding-bottom:70px;text-align:center;padding-top:20px}
+
+/* navbar */
+.navbar{position:fixed;bottom:0;width:100%;display:flex;justify-content:space-around;background:rgba(0,0,0,0.85);padding:10px 0;z-index:100}
+
+/* grid */
+#peopleContainer{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:15px;padding:10px;padding-bottom:100px}
+
+/* card */
+.card{background:rgba(255,255,255,0.08);padding:15px;border-radius:18px;text-align:center;animation:float 6s infinite;cursor:pointer;transition:transform 0.3s}
+.card:hover{transform:scale(1.05)}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+
+/* avatar */
+.avatar{width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:auto;background:#22c55e;font-weight:bold;font-size:18px}
+
+/* popup */
+#popup{position:fixed;top:0;width:100%;height:100%;background:rgba(0,0,0,.6);backdrop-filter:blur(12px);display:none;justify-content:center;align-items:center;z-index:1000}
+.popup-content{background:#111;padding:20px;border-radius:15px;text-align:center;transform:scale(.8);opacity:0;transition:.3s}
+.popup-content.show{transform:scale(1);opacity:1}
+.popup-content button{background:#22c55e;color:#000;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:bold}
+.popup-content button:hover{background:#16a34a}
+
+/* sticky notes */
+#notesContainer{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:20px;padding:15px;padding-bottom:100px}
+.note{padding:15px;border-radius:10px;color:#000;transform:rotate(-2deg);box-shadow:0 4px 8px rgba(0,0,0,0.3)}
+
+/* profile page */
+#name{text-align:center;margin:30px 0}
