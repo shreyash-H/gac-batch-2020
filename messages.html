@@ -1,8 +1,21 @@
 <html>
 <head>
-    <title>Messages</title>
+    <link rel='stylesheet' href='css/style.css'>
 </head>
 <body>
-    <h1>Messages Page</h1>
+    <div id='notesContainer'></div>
+    <div class='navbar'>
+        <a href='index.html'>Home</a>
+        <a href='people.html'>People</a>
+        <a href='messages.html'>Messages</a>
+    </div>
+    <script>
+        let msgs=["Best memories ❤️","Miss you all 😢"];
+        let colors=["#fef08a","#fecaca","#bbf7d0"];
+        msgs.forEach((m,i)=>{
+            document.getElementById("notesContainer").innerHTML+=
+            `<div class='note' style='background:${colors[i%3]}'>${m}<br>- Anonymous</div>`;
+        });
+    </script>
 </body>
 </html>
