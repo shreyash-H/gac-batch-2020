@@ -1,8 +1,21 @@
 <html>
 <head>
-    <title>People</title>
+    <link rel='stylesheet' href='css/style.css'>
 </head>
-<body>
-    <h1>Meet our Team</h1>
+<body onload="initPeople()">
+    <div id='peopleContainer'></div>
+    <div id="popup">
+        <div class="popup-content">
+            <div id="popupRoll"></div>
+            <h3 id="popupName"></h3>
+            <button onclick="goToProfile()">View</button>
+        </div>
+    </div>
+    <div class='navbar'>
+        <a href='index.html'>Home</a>
+        <a href='people.html'>People</a>
+        <a href='messages.html'>Messages</a>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
